@@ -1,10 +1,91 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>My GitHub Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d15">
+  <meta name="description" content="Download the Prestige Client package for Minecraft Java Edition 1.21.11.">
+  <title>Donut Clients — Download</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090d15;
+      --panel: rgba(17, 24, 37, .88);
+      --text: #f5f7fb;
+      --muted: #9ba8bc;
+      --line: rgba(165, 185, 220, .14);
+      --accent: #b9f477;
+      --blue: #91b7ff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 50% 37%, rgba(56, 83, 136, .22), transparent 32rem),
+        radial-gradient(ellipse at 10% 100%, rgba(98, 132, 65, .09), transparent 28rem),
+        var(--bg);
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      opacity: .13;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+    .wrap { position: relative; width: min(760px, calc(100% - 36px)); padding: 44px 0; }
+    .brand { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 28px; color: #d4deed; font-size: 13px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+    .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; color: #18230e; background: linear-gradient(145deg, #d5ff9c, #9bdd57); box-shadow: 0 5px 22px rgba(185, 244, 119, .2); }
+    .brand-mark svg { width: 18px; height: 18px; }
+    .panel { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--panel); box-shadow: 0 28px 100px rgba(0,0,0,.43); backdrop-filter: blur(18px); }
+    .content { padding: 30px 34px 31px; }
+    .eyebrow { display: flex; align-items: center; gap: 8px; color: #a9c5ff; font-size: 10px; font-weight: 720; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 17px; height: 1px; background: var(--blue); }
+    h1 { margin: 13px 0 8px; font-size: clamp(34px, 7vw, 50px); line-height: 1; letter-spacing: -.065em; }
+    .subtitle { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 21px 0 25px; }
+    .chip { padding: 7px 10px; border: 1px solid rgba(145,183,255,.17); border-radius: 999px; color: #b3c5e5; background: rgba(145,183,255,.055); font-size: 10px; }
+    .chip.ready { display: inline-flex; align-items: center; gap: 7px; border-color: rgba(185,244,119,.2); color: #c5ef9b; background: rgba(185,244,119,.055); }
+    .chip.ready::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .download { width: 100%; display: flex; align-items: center; justify-content: center; gap: 11px; min-height: 54px; border: 0; border-radius: 12px; color: #17210e; background: linear-gradient(110deg, #d0ff91, #a9eb65); box-shadow: 0 8px 26px rgba(166, 229, 97, .15); font-size: 14px; font-weight: 760; text-decoration: none; transition: transform .18s ease, filter .18s ease, box-shadow .18s ease; }
+    .download:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 12px 32px rgba(166, 229, 97, .22); }
+    .download:focus-visible { outline: 3px solid rgba(190, 224, 255, .8); outline-offset: 3px; }
+    .download svg { width: 18px; height: 18px; }
+    .below { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; color: #8491a6; font-size: 10px; }
+    @media (max-width: 540px) {
+      .wrap { width: min(100% - 24px, 440px); padding: 26px 0; }
+      .brand { margin-bottom: 20px; }
+      .content { padding: 25px 21px 23px; }
+      .below { font-size: 9px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my brand new website hosted on GitHub Pages.</p>
+  <main class="wrap">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m4.5 7.7 7.5 4.2 7.5-4.2M12 12v8.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span> Donut Clients</div>
+    <section class="panel" aria-labelledby="title">
+      <div class="content">
+        <div class="eyebrow">Donut Client</div>
+        <h1 id="title">Prestige Client</h1>
+        <p class="subtitle">Client package for Minecraft Java Edition 1.21.11.</p>
+        <div class="meta"><span class="chip ready">Download available</span><span class="chip">.JAR package</span><span class="chip">75 KB</span></div>
+        <a class="download" href="prestige-client-1.21.11.jar" download="prestige-client-1.21.11.jar">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 16v4h14v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download Prestige Client
+        </a>
+        <div class="below"><span>Version 1.21.11</span><span>Java Edition</span></div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
+
