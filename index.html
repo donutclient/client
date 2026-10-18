@@ -1,91 +1,464 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090d15">
-  <meta name="description" content="Download the Prestige Client package for Minecraft Java Edition 1.21.11.">
-  <title>Donut Clients — Download</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #090d15;
-      --panel: rgba(17, 24, 37, .88);
-      --text: #f5f7fb;
-      --muted: #9ba8bc;
-      --line: rgba(165, 185, 220, .14);
-      --accent: #b9f477;
-      --blue: #91b7ff;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    * { box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      overflow-x: hidden;
-      color: var(--text);
-      background:
-        radial-gradient(ellipse at 50% 37%, rgba(56, 83, 136, .22), transparent 32rem),
-        radial-gradient(ellipse at 10% 100%, rgba(98, 132, 65, .09), transparent 28rem),
-        var(--bg);
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      opacity: .13;
-      pointer-events: none;
-      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(to bottom, black, transparent 78%);
-    }
-    .wrap { position: relative; width: min(760px, calc(100% - 36px)); padding: 44px 0; }
-    .brand { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 28px; color: #d4deed; font-size: 13px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
-    .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; color: #18230e; background: linear-gradient(145deg, #d5ff9c, #9bdd57); box-shadow: 0 5px 22px rgba(185, 244, 119, .2); }
-    .brand-mark svg { width: 18px; height: 18px; }
-    .panel { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--panel); box-shadow: 0 28px 100px rgba(0,0,0,.43); backdrop-filter: blur(18px); }
-    .content { padding: 30px 34px 31px; }
-    .eyebrow { display: flex; align-items: center; gap: 8px; color: #a9c5ff; font-size: 10px; font-weight: 720; letter-spacing: .16em; text-transform: uppercase; }
-    .eyebrow::before { content: ""; width: 17px; height: 1px; background: var(--blue); }
-    h1 { margin: 13px 0 8px; font-size: clamp(34px, 7vw, 50px); line-height: 1; letter-spacing: -.065em; }
-    .subtitle { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
-    .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 21px 0 25px; }
-    .chip { padding: 7px 10px; border: 1px solid rgba(145,183,255,.17); border-radius: 999px; color: #b3c5e5; background: rgba(145,183,255,.055); font-size: 10px; }
-    .chip.ready { display: inline-flex; align-items: center; gap: 7px; border-color: rgba(185,244,119,.2); color: #c5ef9b; background: rgba(185,244,119,.055); }
-    .chip.ready::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-    .download { width: 100%; display: flex; align-items: center; justify-content: center; gap: 11px; min-height: 54px; border: 0; border-radius: 12px; color: #17210e; background: linear-gradient(110deg, #d0ff91, #a9eb65); box-shadow: 0 8px 26px rgba(166, 229, 97, .15); font-size: 14px; font-weight: 760; text-decoration: none; transition: transform .18s ease, filter .18s ease, box-shadow .18s ease; }
-    .download:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 12px 32px rgba(166, 229, 97, .22); }
-    .download:focus-visible { outline: 3px solid rgba(190, 224, 255, .8); outline-offset: 3px; }
-    .download svg { width: 18px; height: 18px; }
-    .below { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; color: #8491a6; font-size: 10px; }
-    @media (max-width: 540px) {
-      .wrap { width: min(100% - 24px, 440px); padding: 26px 0; }
-      .brand { margin-bottom: 20px; }
-      .content { padding: 25px 21px 23px; }
-      .below { font-size: 9px; }
-    }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m4.5 7.7 7.5 4.2 7.5-4.2M12 12v8.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span> Donut Clients</div>
-    <section class="panel" aria-labelledby="title">
-      <div class="content">
-        <div class="eyebrow">Donut Client</div>
-        <h1 id="title">Prestige Client</h1>
-        <p class="subtitle">Client package for Minecraft Java Edition 1.21.11.</p>
-        <div class="meta"><span class="chip ready">Download available</span><span class="chip">.JAR package</span><span class="chip">75 KB</span></div>
-        <a class="download" href="prestige-client-1.21.11.jar" download="prestige-client-1.21.11.jar">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 16v4h14v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Download Prestige Client
-        </a>
-        <div class="below"><span>Version 1.21.11</span><span>Java Edition</span></div>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+<!DOCTYPE html>
 
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AeroVision X | Elevate Your Perspective</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Manrope:wght@300;400;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="js/tailwind-config.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/75 backdrop-blur-xl shadow-sm shadow-blue-950/40 transition-all duration-300 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
+            <div class="text-2xl font-black text-on-surface tracking-tighter font-headline">AeroVision X</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="group inline-flex items-center gap-2 font-epilogue font-bold tracking-tight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#specs">
+                    <span>Specs</span>
+                </a>
+                <a class="group inline-flex items-center gap-2 font-epilogue font-bold tracking-tight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#gallery">
+                    <span>Gallery</span>
+                </a>
+                <a class="group inline-flex items-center gap-2 font-epilogue font-bold tracking-tight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#safety">
+                    <span>Safety</span>
+                </a>
+                <a class="group inline-flex items-center gap-2 font-epilogue font-bold tracking-tight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#support">
+                    <span>Support</span>
+                </a>
+                <div class="relative group">
+                    <button class="group inline-flex items-center gap-2 font-epilogue font-bold tracking-tight text-on-surface-variant hover:text-primary transition-colors duration-200 focus:outline-none">
+                        <span>Pages</span>
+                        <span class="px-1.5 py-0.5 text-[10px] font-label font-bold uppercase tracking-[0.15em] rounded-full bg-primary/15 text-primary border border-primary/30">PRO</span>
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+                    </button>
+                    <div class="absolute left-0 top-full mt-3 w-52 rounded-2xl border border-white/10 bg-surface/95 p-2 shadow-2xl shadow-blue-950/20 backdrop-blur-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <a class="flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors" href="index.html">
+                            <span>Home</span>
+                            <span class="px-1.5 py-0.5 text-[9px] font-label font-bold uppercase tracking-[0.15em] rounded-full bg-primary/15 text-primary border border-primary/30">PRO</span>
+                        </a>
+                        <a class="flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors" href="product.html">
+                            <span>Product</span>
+                            <span class="px-1.5 py-0.5 text-[9px] font-label font-bold uppercase tracking-[0.15em] rounded-full bg-primary/15 text-primary border border-primary/30">PRO</span>
+                        </a>
+                        <a class="flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors" href="pricing.html">
+                            <span>Pricing</span>
+                            <span class="px-1.5 py-0.5 text-[9px] font-label font-bold uppercase tracking-[0.15em] rounded-full bg-primary/15 text-primary border border-primary/30">PRO</span>
+                        </a>
+                        <a class="flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors" href="support.html">
+                            <span>Support</span>
+                            <span class="px-1.5 py-0.5 text-[9px] font-label font-bold uppercase tracking-[0.15em] rounded-full bg-primary/15 text-primary border border-primary/30">PRO</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-headline font-bold text-sm tracking-tight hover:scale-105 transition-transform duration-200 shadow-lg shadow-primary/20">
+                Pre-order
+            </button>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+            <div class="absolute inset-0 z-0">
+                <img alt="" class="w-full h-full object-cover opacity-80"
+                    data-alt="Breathtaking cinematic aerial shot of snow-capped mountain peaks piercing through a sea of clouds during blue hour, high-fidelity professional photography."
+                    src="images/banner.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/25"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+                <div class="max-w-2xl">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-primary/15 text-primary font-label font-bold text-xs uppercase tracking-widest mb-6 border border-primary/30">Introducing
+                        the Next Generation</span>
+                    <h1
+                        class="font-headline font-black text-6xl md:text-8xl text-on-surface leading-tight tracking-tighter mb-8">
+                        Elevate Your <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Perspective</span>
+                    </h1>
+                    <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed mb-10 max-w-xl font-light">
+                        Experience the zenith of aerial engineering. Unmatched stability, intelligent autonomy, and
+                        cinematic precision in every frame.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-primary-dim transition-colors shadow-xl shadow-primary/25">
+                            Pre-order Now
+                        </button>
+                        <button
+                            class="flex items-center gap-3 px-8 py-5 rounded-full font-headline font-bold text-lg text-primary hover:bg-primary-container/10 transition-colors">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            Watch the Film
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Specs Section (Bento Grid) -->
+        <section class="py-32 bg-surface" id="specs">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="mb-20 text-center max-w-3xl mx-auto">
+                    <h2 class="font-headline font-black text-4xl md:text-5xl mb-6 tracking-tight">Precision Engineering
+                    </h2>
+                    <p class="text-on-surface-variant text-lg">Every component of the AeroVision X is meticulously
+                        crafted to push the boundaries of what's possible in the sky.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Spec 1: Camera -->
+                    <div
+                        class="md:col-span-2 bg-surface-container-low p-10 rounded-3xl flex flex-col justify-between group transition-all duration-300 hover:bg-surface-container">
+                        <div>
+                            <span class="material-symbols-outlined text-primary text-4xl mb-6"
+                                data-icon="photo_camera">photo_camera</span>
+                            <h3 class="font-headline font-bold text-3xl mb-4">4K Cinematic Camera</h3>
+                            <p class="text-on-surface-variant leading-relaxed mb-8">1-inch CMOS sensor with 10-bit
+                                Dlog-M color profile for breathtaking dynamic range and clarity.</p>
+                        </div>
+                        <img class="w-full h-48 object-cover rounded-2xl shadow-sm"
+                            data-alt="Extreme close-up of a professional drone camera lens reflecting blue and violet light, high-tech metallic finish, minimalist background."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsG1NWXPecfAj3S6PB1ZHU9otWmlH2p7AyzwfPcQTMyznraMyU2eQAZXuIFEPJTmUGqFq8jlsEUzJjFRNVsNOEJ-GIifdcr4Hy9GFfIFwIaUzDwMNBRYAVpkqWlGLREUAsYEtMZU5BkdFu3wp8hQX6Ko_lfMNA-7-uJPKRiNtlJhPYdA826tghHsIqO0cwCTtMDIzgK0nV2q6a5721TiI94vqV0QoEioBF-F1MCeIQkb1dNQDiwc2eG_s5gVr-rDcUezFp7vCUEdo" />
+                    </div>
+                    <!-- Spec 2: Flight Time -->
+                    <div
+                        class="bg-surface-container-low p-10 rounded-3xl flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-all">
+                        <div class="relative w-32 h-32 mb-8 flex items-center justify-center">
+                            <svg class="w-full h-full -rotate-90">
+                                <circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="58"
+                                    stroke="currentColor" stroke-width="8"></circle>
+                                <circle class="text-primary" cx="64" cy="64" fill="transparent" r="58"
+                                    stroke="currentColor" stroke-dasharray="364" stroke-dashoffset="100"
+                                    stroke-width="8"></circle>
+                            </svg>
+                            <span class="absolute font-headline font-black text-3xl text-primary">45</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-xl mb-2">Flight Time</h3>
+                        <p class="text-on-surface-variant text-sm">Minutes of sustained high-performance flight.</p>
+                    </div>
+                    <!-- Spec 3: Range -->
+                    <div
+                        class="bg-surface-container-highest/30 p-10 rounded-3xl flex flex-col justify-between hover:bg-surface-container-highest/50 transition-all">
+                        <span class="material-symbols-outlined text-primary text-4xl"
+                            data-icon="distance">distance</span>
+                        <div>
+                            <h3 class="font-headline font-bold text-4xl mb-1 text-primary">10km</h3>
+                            <p class="text-on-surface font-semibold">Transmission Range</p>
+                            <p class="text-on-surface-variant text-xs mt-2">Crystal clear OcuSync 4.0 technology.</p>
+                        </div>
+                    </div>
+                    <!-- Spec 4: AI Avoidance -->
+                    <div
+                        class="md:col-span-4 bg-surface-container p-10 rounded-3xl flex flex-col md:flex-row items-center gap-12 group hover:shadow-xl transition-all">
+                        <div class="md:w-1/2">
+                            <span class="material-symbols-outlined text-primary text-5xl mb-6"
+                                data-icon="auto_awesome">auto_awesome</span>
+                            <h3 class="font-headline font-bold text-4xl mb-4">AI Obstacle Avoidance</h3>
+                            <p class="text-on-surface-variant text-lg leading-relaxed">Omnidirectional sensing powered
+                                by neural networks. Fly with confidence through complex environments like forests or
+                                urban landscapes.</p>
+                        </div>
+                        <div class="md:w-1/2 relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Abstract visualization of a drone's LiDAR scanning field in a forest, glowing blue wireframe patterns mapping tree trunks and branches."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1gUgWOK-W5RWR6637jug_v3pgdY9hxZotgMjapc8PDhKr56xm-5LYj9JwmsAo_06pNFyNsvmIPFtOEGE5qppQUewvMtzFmTt_DY9oqVmyR1yaKCqo99Yj_aCMafHZqbGzKLAzQvNyUHIb3uiOjqzMLQieL2deulYnaD054gE2XKHSoHjt3Rf6fqYUNOU30u6HgEO3-yk5y3cRaJ2sfu7rbweka_TGvB_GhBVrLQAh9DejMUCHjsSVy-x-HIHhDW__ktrqb21GKhA" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section -->
+        <section class="py-32 bg-surface-container-lowest overflow-hidden relative" id="gallery">
+            <div class="max-w-7xl mx-auto px-8 mb-16 flex justify-between items-end">
+                <div class="max-w-xl">
+                    <h2 class="font-headline font-black text-4xl md:text-5xl mb-4">Captured by AeroVision</h2>
+                    <p class="text-on-surface-variant">Real shots from our global community of creators.</p>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
+                        id="gallery-prev">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </button>
+                    <button
+                        class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
+                        id="gallery-next">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="flex gap-6 overflow-x-auto pb-12 px-8 snap-x snap-mandatory no-scrollbar scroll-smooth"
+                    id="gallery-container">
+                    <div
+                        class="gallery-item flex-shrink-0 w-[85vw] md:w-[600px] aspect-[16/10] rounded-3xl overflow-hidden snap-center shadow-lg cursor-pointer group relative">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="High-angle shot of a winding coastal road along dramatic dark cliffs and crashing turquoise ocean waves, cinematic lighting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBXbTR5J-hG43_KvzswNpEGDAK6X3t6voet0X2I5NBulXPtNTaTCyTZmCN9IYqGM5lfBB7My-MM2gyfapzXOlQMDzz2xwWCS1V2dLhdZuGt3gBQ15UzthGiTNvwiQMRxewA2Zc9I4VdIcItZlfWJHn-q5ujV5ZUg3ue5XDS4Rp5yOUX8qoGtAc_JBcJsZn36nsbqWzvu9r2bfTzPP2akpbjRuxloPQGpafDRK7_gwJ597Deo9nLDYZT7cJQ5t2SLqkuczHshlgJyo" />
+                        <div
+                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item flex-shrink-0 w-[85vw] md:w-[600px] aspect-[16/10] rounded-3xl overflow-hidden snap-center shadow-lg cursor-pointer group relative">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Aerial view of a geometric modern architecture building in a desert oasis, morning shadows casting long sharp lines, high contrast."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQbugJhNh3gSwStEOXymsGwWNRq2CgWq4jQIRxekQXVY1kbAKU_bkWefKXYojYbh39MWySP31NP3iGASE715yUezCnNgB27v5becLdk5OCl1bexGMd57iycUN0Gn1NIonncgvrhh3JR6OqIEETdkoS4M3Utgkr46hyy-_4MwJFfiS42NsScl5BtbGN0ckVCS16VN5mHrTiENK5aixd4IHa3Yu3_YI8b1KTIp5eai9EmzsOUqpSAONoebiH0p7ekZ6AgFZomNn5Fbk" />
+                        <div
+                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item flex-shrink-0 w-[85vw] md:w-[600px] aspect-[16/10] rounded-3xl overflow-hidden snap-center shadow-lg cursor-pointer group relative">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Top-down shot of a vibrant autumn forest with a single red tree standing out amongst yellow and orange foliage, misty atmosphere."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm8Nkqh_BeYo3fvmyASexdhiE_PVO8YqEUqSJkzy_XeRn3J-6oNSkwVjBLG3x5qwdiPy4jzf7LliWk_b0onrVWZctWRxQi8UeLk_sZSSXO1hx2fQMldYuLtCn7lCKtU5Fx_kYg3H1AIvMTc0mQCce_WuqMSG1BRUC2R2RqIDl6c8AGDO1zGxHLCgBIYr_3yJaLK_CF6u_B57hp_awtzWoBDHQMzx5_9D1z_BHzoHdui998rcDr_52JpAWKmFE5Y-uGYdh9NtYcL88" />
+                        <div
+                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+                        </div>
+                    </div>
+                    <div
+                        class="gallery-item flex-shrink-0 w-[85vw] md:w-[600px] aspect-[16/10] rounded-3xl overflow-hidden snap-center shadow-lg cursor-pointer group relative">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Aerial cinematic view of a futuristic city at night with neon lights and flying vehicle trails."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk6ZXrtcen9hKTBTJ_wLezkQ9gE-irBckDTt8G3qBge40_1SXghrb4164H7pL5ou85JgthcxRe4LNq6Mrk9PVEk3hVJF3UVhWhGaCKQH-caIw1nRHKnd4ja9xTcdlxIwjlP-kEei-BZgVrcXhisKD0Lz4sPRsm5eZblrfwKNurFEFR8ieIj3mhIas_wW8NSdvcYoLRNwHOLomCuElZExLygjj2sWPmaXNPgK6dgMfLfr8bgB0gNABIA6ozhAIoDYlWINg8vhGseCg" />
+                        <div
+                            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl">zoom_in</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination Dots -->
+                <div class="flex justify-center gap-3 mt-4" id="gallery-dots">
+                    <!-- Dots generated by JS -->
+                </div>
+            </div>
+        </section>
+        <!-- Lightbox Modal -->
+        <div class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm hidden items-center justify-center p-4"
+            id="lightbox">
+            <button class="absolute top-8 right-8 text-white hover:text-primary transition-colors" id="lightbox-close">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <div class="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center">
+                <img alt="Gallery Image Large"
+                    class="max-w-full max-h-full object-contain cursor-zoom-in transition-transform duration-300"
+                    id="lightbox-img" src="" />
+            </div>
+            <div
+                class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 font-label text-sm px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                Click image to toggle zoom
+            </div>
+        </div>
+        <!-- Safety & Support Section -->
+        <section class="py-32 bg-surface" id="safety">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="bg-inverse-surface rounded-[3rem] p-12 md:p-20 text-surface overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+                        <div class="w-full h-full bg-gradient-to-l from-primary to-transparent"></div>
+                    </div>
+                    <div class="relative z-10 grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 class="font-headline font-black text-4xl md:text-5xl mb-8 leading-tight">Intelligence
+                                That <br />Protects Your Flight</h2>
+                            <div class="space-y-8">
+                                <div class="flex gap-6">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 rounded-full bg-surface/10 flex items-center justify-center text-primary">
+                                        <span class="material-symbols-outlined"
+                                            data-icon="safety_check">safety_check</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-headline font-bold text-xl mb-2">Smart Return-to-Home</h4>
+                                        <p class="text-inverse-on-surface">Automatically calculates the safest route
+                                            back to the takeoff point based on battery and signal strength.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <div
+                                        class="flex-shrink-0 w-12 h-12 rounded-full bg-surface/10 flex items-center justify-center text-primary">
+                                        <span class="material-symbols-outlined" data-icon="radar">radar</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-headline font-bold text-xl mb-2">ActiveTrack 5.0</h4>
+                                        <p class="text-inverse-on-surface">Lock onto your subject with military-grade
+                                            precision, even in high-speed maneuvers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-12 flex flex-col sm:flex-row gap-6">
+                                <button
+                                    class="bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-bold">Explore
+                                    Features</button>
+                                <button
+                                    class="border border-outline-variant/30 px-8 py-4 rounded-full font-headline font-bold hover:bg-surface/5">Contact
+                                    Support</button>
+                            </div>
+                        </div>
+                        <div class="hidden md:block">
+                            <img class="w-full rounded-2xl shadow-2xl"
+                                data-alt="Sleek silver AeroVision X drone hovering in a high-tech studio environment, illuminated by thin blue neon light strips on its rotors."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3LmA1ET3wzic54QGqrRtlCFEhRC_O-Qfjek2OONRCq7pVKm8mghaPEvAczlm_IEO7AvCAKd-s9qCcaKq6LlW5JqZuNWIAQBfNiemCZ8bToRE2byWeQu5KaocxjkCmcq8dQahiIEJPFil9-wr0a-g1WD-ME5vW15YZKstr9O1-fHSVBUrH0HuTjX_933j8uYav1OH4Alv950u4lCSud2EZc1is_Cfu0OiCjtcUXkB-kWDUz-lP4gQGirP_vdIirz_v4Qrf6TCI5pE" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Flight Modes Section -->
+        <section class="py-32 bg-surface-container-low" id="support">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="mb-16 text-center max-w-3xl mx-auto">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-primary/15 text-primary font-label font-bold text-xs uppercase tracking-widest mb-5 border border-primary/30">Built
+                        for Every Flight</span>
+                    <h2 class="font-headline font-black text-4xl md:text-5xl mb-6 tracking-tight">Intelligent modes for every creative mission</h2>
+                    <p class="text-on-surface-variant text-lg">Switch from cinematic capture to rapid inspection in seconds with software tuned for precision and ease.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="group bg-surface p-8 rounded-[2rem] border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">movie</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-2xl mb-4">Cinematic</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">Master slow, dramatic flight paths with subject tracking, horizon lock, and ultra-smooth gimbal motion.</p>
+                        <ul class="space-y-3 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> ActiveTrack 5.0</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> 4K/60 HDR capture</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> Story mode presets</li>
+                        </ul>
+                    </div>
+                    <div class="group bg-surface p-8 rounded-[2rem] border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-2xl mb-4">Autonomous</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">Let the aircraft map your environment, adapt to obstacles, and return safely without sacrificing performance.</p>
+                        <ul class="space-y-3 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> Smart return path</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> 360° obstacle awareness</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> Auto landing assist</li>
+                        </ul>
+                    </div>
+                    <div class="group bg-surface p-8 rounded-[2rem] border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">timelapse</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-2xl mb-4">Hyperlapse</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">Create long-form motion sequences with stable, time-lapsed transitions that look premium without manual work.</p>
+                        <ul class="space-y-3 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> Path planner</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> Orbit tracking</li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> Scheduled shots</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="py-32 bg-surface">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-stretch">
+                    <div class="bg-gradient-to-br from-surface-container to-surface p-10 md:p-12 rounded-[2.5rem] border border-white/5 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 rounded-full bg-primary/10 blur-3xl"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-8">
+                                <div class="flex -space-x-2">
+                                    <img class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="" />
+                                    <img class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="" />
+                                    <img class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop" alt="" />
+                                </div>
+                                <span class="text-sm font-label uppercase tracking-[0.2em] text-on-surface-variant">Trusted by creators</span>
+                            </div>
+                            <p class="text-2xl md:text-4xl font-headline font-black leading-tight tracking-tight mb-8 text-on-surface">“AeroVision X makes our location shoots feel effortless. The frame stability and safety intelligence are in a league of their own.”</p>
+                            <div class="flex items-center justify-between gap-6 flex-wrap">
+                                <div>
+                                    <p class="font-headline font-bold text-lg">Elena Brooks</p>
+                                    <p class="text-on-surface-variant">Director of Visual Storytelling</p>
+                                </div>
+                                <div class="flex items-center gap-2 text-primary">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="font-headline font-bold text-lg">4.9/5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-surface-container p-8 rounded-[2rem] border border-white/5">
+                            <p class="text-sm font-label uppercase tracking-[0.2em] text-on-surface-variant mb-3">Global pilots</p>
+                            <p class="text-5xl font-headline font-black text-on-surface">72k</p>
+                        </div>
+                        <div class="bg-surface-container p-8 rounded-[2rem] border border-white/5">
+                            <p class="text-sm font-label uppercase tracking-[0.2em] text-on-surface-variant mb-3">Flights captured</p>
+                            <p class="text-5xl font-headline font-black text-on-surface">1.8M</p>
+                        </div>
+                        <div class="bg-surface-container p-8 rounded-[2rem] border border-white/5">
+                            <p class="text-sm font-label uppercase tracking-[0.2em] text-on-surface-variant mb-3">Avg. satisfaction</p>
+                            <p class="text-5xl font-headline font-black text-on-surface">98%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA Section -->
+        <section class="py-32 bg-surface-container-low text-center">
+            <div class="max-w-4xl mx-auto px-8">
+                <h2 class="font-headline font-black text-5xl mb-8">The Future of Flight is Here.</h2>
+                <p class="text-on-surface-variant text-xl mb-12">Join the elite rank of creators who refuse to
+                    compromise on quality and safety.</p>
+                <div class="inline-flex flex-col items-center">
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm mb-8 flex flex-col md:flex-row items-center gap-12">
+                        <div class="text-left">
+                            <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Price
+                                starts at</p>
+                            <p class="text-4xl font-headline font-black text-on-surface">$2,499</p>
+                        </div>
+                        <button
+                            class="bg-primary text-on-primary px-12 py-5 rounded-full font-headline font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/30">
+                            Pre-order AeroVision X
+                        </button>
+                    </div>
+                    <p class="text-sm text-on-surface-variant flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">info</span>
+                        Free worldwide shipping and 2-year premium warranty included.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 bg-surface-container-low flex flex-col items-center gap-6 px-8">
+        <div
+            class="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center gap-8 border-b border-outline-variant/10 pb-12">
+            <div class="text-lg font-bold text-on-surface font-headline">AeroVision X</div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="font-plus-jakarta text-sm text-on-surface-variant hover:underline transition-all opacity-80"
+                    href="#">Privacy Policy</a>
+                <a class="font-plus-jakarta text-sm text-on-surface-variant hover:underline transition-all opacity-80"
+                    href="#">Terms of Flight</a>
+                <a class="font-plus-jakarta text-sm text-on-surface-variant hover:underline transition-all opacity-80"
+                    href="#">Compliance</a>
+                <a class="font-plus-jakarta text-sm text-on-surface-variant hover:underline transition-all opacity-80"
+                    href="#">Press Kit</a>
+            </div>
+        </div>
+        <div class="text-center">
+            <p class="font-plus-jakarta text-sm text-on-surface-variant opacity-60">© 2024 AeroVision Systems. Elevate your perspective. <span class="mx-1">|</span> <a href="https://www.templatesjungle.com" target="_blank" rel="noreferrer" class="text-primary hover:underline">HTML template by TemplatesJungle</a></p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
